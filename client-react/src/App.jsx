@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
-import "./App.css";
+import "./App.scss";
 
 let socket;
 const ENDPOINT = "http://localhost:5000/";
@@ -73,7 +73,7 @@ function App() {
               return (
                 <div
                   key={key}
-                  className="messageContainer"
+                  className="chatbox"
                   id={val.author === username ? "You" : "Other"}
                 >
                   <span>{val.author}</span>

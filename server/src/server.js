@@ -15,8 +15,6 @@ const server = app.listen(port, () => {
 const io = socket(server);
 
 io.on("connection", (socket) => {
-  console.log(socket.id);
-
   socket.on("join_room", (data) => {
     socket.join(data);
     console.log(`User Joined Room: ${data}`);
